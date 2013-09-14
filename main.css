@@ -1,0 +1,175 @@
+@charset "utf-8";
+.cf {
+	zoom: 1;
+}
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+body {
+	width: 100%;
+	background-color:#000000;
+	color: #ffffff;
+	margin: 1em 0 0 0;
+}
+body:before {
+	content: "";
+	position: fixed;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	z-index: 100;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+}
+
+div#all {
+	width: 640px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	font-family: 'Droid Sans', sans-serif;
+}
+div#all a {
+	color: #ffffff;
+}
+nav {
+	margin: 0 auto 0 auto;
+	padding: 0;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+header {
+	text-align: center;
+}
+header h1 {
+	margin: 0 0 0.1em 0;
+	padding: 0;
+	font-family: 'Raleway', serif;
+	font-size: 1.5em;
+	color: #ffffff;
+}
+header p {
+	margin: 0 0 0.1em 0;
+	padding: 0;
+	font-family: 'Raleway', serif;
+	font-size: 0.8em;
+}
+
+div#contens {
+	margin: 0 auto 0 auto;
+	padding: 0;
+}
+html {
+	overflow-y: scroll;
+}
+
+div#contens div.wrap {
+	margin: 2em 0 0 0;
+	padding: 0;
+}
+
+div.noteM {
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	opacity: 0;
+	border-radius: 50%;
+}
+div.noteS {
+	width: 75px;
+	height: 75px;
+	display: inline-block;
+	opacity: 0;
+	border-radius: 50%;
+}
+div#k {
+	background-color:#8370D8;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+div#h {
+	background-color:#5ECFC0;
+	margin: 0 75px 0 75px;
+	padding: 0;
+}
+div#s {
+	background-color:#E266B7;
+	margin: 0 0 0 0;
+	padding: 0;
+}
+div#cl {
+	background-color:#67A1D2;
+	margin: 0 0 0 160px;
+	padding: 0;
+}
+div#cr {
+	background-color:#FFE473;
+	margin: 0 0 0 150px;
+	padding: 0;
+}
+
+div#btns {
+	width: 270px;
+	display: inline-block;
+	margin: 0 0 0 10px;
+	padding: 0;
+	vertical-align: top;
+}
+div#btns p {
+	margin: 1em 0 1em 0;
+	padding: 0;
+	font-size: 0.75em;
+}
+div#btns p.color {
+	color: #ffff00;
+}
+div#btns span {
+	margin: 0.5em 0 0 0;
+	padding: 0;
+	font-size: 0.75em;
+}
+input.btn {
+	cursor: pointer;
+	width: 100px;
+	height: 40px;
+	margin: 0.5em 0 0 50px;
+	padding: 0;
+}
+div#divytplayerwrap {
+	display: inline-block;
+	vertical-align: top;
+	border: solid 1px #3E3A39;
+}
+
+footer {
+	margin: 2em 0 0 0;
+	padding: 0;
+}
+footer dl {
+	margin: 0 auto 0 auto;
+	padding: 0;
+}
+footer dl dt {
+	float: left;
+	clear: both;
+	margin: 0 0 0.5em 0;
+	padding: 0 0 0 0.5em;
+	width: 90px;
+	font-family: 'Cabin', sans-serif;
+	font-size: 0.85em;
+	border-left: solid 3px #ff7f0e;
+}
+footer dl dd {
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 0.85em;
+}
+footer div.tweet {
+	margin: 0.5em auto 1em auto;
+	padding: 0;
+}

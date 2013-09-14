@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>KiRhythmbox v0.8 - Simple Example - </title>
+<meta name="description" content="リズム譜を書くことで、音楽とざっくり同期を取って何かするためのJavaScriptライブラリ" />
+<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="all">
+	<nav>
+		<div>
+			<a target="_blank" href="http://kiritter.github.io/">Home</a>
+		</div>
+	</nav>
+	<article>
+		<header>
+			<h1>KiRhythmbox v0.8 - Simple Example - </h1>
+			<p>リズム譜を書くことで、音楽とざっくり同期を取って何かするためのJavaScriptライブラリ</p>
+		</header>
+
+		<div id="contens">
+			<div id="stageSVG"></div>
+			<div class="wrap">
+				<div class="noteM" id="k"></div>
+				<div class="noteM" id="h"></div>
+				<div class="noteM" id="s"></div>
+			</div>
+			<div class="wrap">
+				<div class="noteS" id="cl"></div>
+				<div class="noteS" id="cr"></div>
+			</div>
+			<div class="wrap">
+				<div id="btns">
+					<p class="color">YouTube動画の読み込みが十分落ち着いてから<br>PLAYボタンをクリックして下さい。</p>
+					<p>ずれたら一旦STOPボタンで停止させて<br>改めてPLAYを。。（または以下で微調整。。）</p>
+					<div>
+						<span>動画の開始から</span>
+						<input type="text" id="txtDelayTime" size="4" maxlength="4" value="">
+						<span>ミリ秒後に描画開始</span>
+					</div>
+					<div>
+						<input type="button" class="btn" id="btnPlay" value="">
+					</div>
+					<div>
+						<input type="button" class="btn" id="btnStop" value="">
+					</div>
+					<p>※ Google Chrome でのみ動作確認済み</p>
+				</div>
+				<div id="divytplayerwrap">
+					<div id="divytplayer"></div>
+				</div>
+			</div>
+		</div>	<!-- end of #contens -->
+
+		<footer>
+			<dl class="cf">
+				<dt>GitHub Code</dt>
+				<dd><a target="_blank" href="https://github.com/kiritter/KiRhythmbox_v0.8">https://github.com/kiritter/KiRhythmbox_v0.8</a></dd>
+				<dt>Blog Page</dt>
+				<dd><a target="_blank" href="http://kiritter.hatenablog.com">http://kiritter.hatenablog.com</a></dd>
+				<dt>Twitter</dt>
+				<dd><a class="kiritter" target="_blank" href="https://twitter.com/kiritter">@kiritter</a></dd>
+			</dl>
+			<div class="tweet">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="kiritter" data-lang="ja">ツイート</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+		</footer>
+	</article>
+</div>	<!-- end of #all -->
+<script src="kirhythmbox_v0.8.js"></script>
+<script src="audiomanager.js"></script>
+<script src="score.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
