@@ -11,8 +11,8 @@ KIRIAPP.audioManager = (function() {
 	var _isPC = true;
 	var _startTime = 0;
 	var _ytplayer = null;
-	var isPC = function(ua) {
-		ua = ua.toLowerCase();
+	var isPC = function() {
+		var ua = window.navigator.userAgent.toLowerCase();
 		if (ua.indexOf("iphone") > 0
 			|| ua.indexOf("ipad") > 0
 			|| ua.indexOf("ipod") > 0
@@ -22,7 +22,7 @@ KIRIAPP.audioManager = (function() {
 			return true;
 		}
 	};
-	var _loadAPICode = function(document) {
+	var _loadAPICode = function() {
 		var tag = document.createElement('script');
 		tag.src = "//www.youtube.com/iframe_api";
 		var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -65,11 +65,11 @@ KIRIAPP.audioManager = (function() {
 		_ytplayer.pauseVideo();
 	};
 	return {
-		init: function(ua, document, youtubeVideoId, startTime, callback) {
-			_initPlayer(youtubeVideoId, callback);
-			_isPC = isPC(ua);
+		init: function(youtubeVideoId, startTime, callback) {
+			_isPC = isPC();
 			_startTime = startTime;
-			_loadAPICode(document);
+			_initPlayer(youtubeVideoId, callback);
+			_loadAPICode();
 		}
 		, isLoad: function() {
 			return _isLoad;
