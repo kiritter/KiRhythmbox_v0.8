@@ -40,11 +40,12 @@ function editHtmlElements() {
 }
 
 function loadAudio() {
+	var ua = window.navigator.userAgent;
 	//Synkro - Acceptance
 	var videoId = "_dNht9Zr0CE";
 	var startTime = 28;
 	var callback = function(e) {alert(e.message);};
-	KIRIAPP.audioManager.init(document, videoId, startTime, callback);
+	KIRIAPP.audioManager.init(ua, document, videoId, startTime, callback);
 }
 
 function loadScore() {

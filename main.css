@@ -139,6 +139,21 @@ input.btn {
 	margin: 0.5em 0 0 50px;
 	padding: 0;
 }
+div#btns ul {
+	margin: 1em 0 1em 0;
+	padding: 0 0 0 1.3em;
+	font-size: 0.75em;
+	list-style-type: none;
+}
+div#btns li:before {
+	content: "※ ";
+}
+div#btns li {
+	margin: 1em 0 1em 0;
+	padding: 0;
+	text-indent: -1.3em;
+}
+
 div#divytplayerwrap {
 	display: inline-block;
 	vertical-align: top;
