@@ -13,7 +13,7 @@ var kirhythmbox = (function() {
 	"use strict";
 
 	//--------------------------------------------------
-	var SMALLEST_NOTE = {
+	var MIN_NOTE = {
 		QUARTER    : {NUM_PER_BAR: 4,  TIME_PER_BAR: function(bpm) {return (60/(bpm*1))*1000;}}
 		, EIGHTH   : {NUM_PER_BAR: 8,  TIME_PER_BAR: function(bpm) {return (60/(bpm*2))*1000;}}
 		, SIXTEENTH: {NUM_PER_BAR: 16, TIME_PER_BAR: function(bpm) {return (60/(bpm*4))*1000;}}
@@ -121,22 +121,22 @@ var kirhythmbox = (function() {
 			throw new Error("'conf.bpm' must be >= 1 and <= 240.");
 		}
 
-		if (isNumber(conf.smallestNote) === false) {
-			throw new Error("'conf.smallestNote' must be kirhythmbox.QUARTER, EIGHTH or SIXTEENTH.");
+		if (isNumber(conf.minNote) === false) {
+			throw new Error("'conf.minNote' must be kirhythmbox.QUARTER, EIGHTH or SIXTEENTH.");
 		}
 		var numPerBar;
-		switch (conf.smallestNote) {
+		switch (conf.minNote) {
 			case CONST.QUARTER:
-				numPerBar = SMALLEST_NOTE.QUARTER.NUM_PER_BAR;
+				numPerBar = MIN_NOTE.QUARTER.NUM_PER_BAR;
 				break;
 			case CONST.EIGHTH:
-				numPerBar = SMALLEST_NOTE.EIGHTH.NUM_PER_BAR;
+				numPerBar = MIN_NOTE.EIGHTH.NUM_PER_BAR;
 				break;
 			case CONST.SIXTEENTH:
-				numPerBar = SMALLEST_NOTE.SIXTEENTH.NUM_PER_BAR;
+				numPerBar = MIN_NOTE.SIXTEENTH.NUM_PER_BAR;
 				break;
 			default:
-				throw new Error("'conf.smallestNote' must be kirhythmbox.QUARTER, EIGHTH or SIXTEENTH.");
+				throw new Error("'conf.minNote' must be kirhythmbox.QUARTER, EIGHTH or SIXTEENTH.");
 		}
 
 		if (existsVariable(conf.delayTime)) {
@@ -335,22 +335,22 @@ var kirhythmbox = (function() {
 		conf = argConf;
 
 		var bpm = argConf.bpm;
-		var smallestNote = argConf.smallestNote;
+		var minNote = argConf.minNote;
 
 		MN.BAR_TIME = (60/bpm)*4*1000;
 
-		switch (smallestNote) {
+		switch (minNote) {
 			case CONST.QUARTER:
-				MN.LEN = SMALLEST_NOTE.QUARTER.NUM_PER_BAR;
-				MN.NOTE_TIME = SMALLEST_NOTE.QUARTER.TIME_PER_BAR(bpm);
+				MN.LEN = MIN_NOTE.QUARTER.NUM_PER_BAR;
+				MN.NOTE_TIME = MIN_NOTE.QUARTER.TIME_PER_BAR(bpm);
 				break;
 			case CONST.EIGHTH:
-				MN.LEN = SMALLEST_NOTE.EIGHTH.NUM_PER_BAR;
-				MN.NOTE_TIME = SMALLEST_NOTE.EIGHTH.TIME_PER_BAR(bpm);
+				MN.LEN = MIN_NOTE.EIGHTH.NUM_PER_BAR;
+				MN.NOTE_TIME = MIN_NOTE.EIGHTH.TIME_PER_BAR(bpm);
 				break;
 			case CONST.SIXTEENTH:
-				MN.LEN = SMALLEST_NOTE.SIXTEENTH.NUM_PER_BAR;
-				MN.NOTE_TIME = SMALLEST_NOTE.SIXTEENTH.TIME_PER_BAR(bpm);
+				MN.LEN = MIN_NOTE.SIXTEENTH.NUM_PER_BAR;
+				MN.NOTE_TIME = MIN_NOTE.SIXTEENTH.TIME_PER_BAR(bpm);
 				break;
 		}
 	};

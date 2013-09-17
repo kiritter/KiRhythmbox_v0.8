@@ -52,7 +52,7 @@ function loadScore() {
 
 	var conf = {
 		bpm : 85
-		, smallestNote : kirhythmbox.SIXTEENTH
+		, minNote : kirhythmbox.SIXTEENTH
 //		, delayTime : 1250
 		, score : score
 		, opt_callback : function() {
