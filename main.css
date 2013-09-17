@@ -37,9 +37,21 @@ div#all a {
 	color: #ffffff;
 }
 nav {
-	margin: 0 auto 0 auto;
-	padding: 0;
+	font-size: 0.85em;
 	font-family: 'Droid Sans', sans-serif;
+}
+nav ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav ol li {
+	display: inline-block;
+}
+nav ol li~li:before {
+	content: ">";
+	margin: 0 0.25em 0 0.25em;
+	padding: 0;
 }
 
 header {
