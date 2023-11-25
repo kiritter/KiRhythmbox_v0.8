@@ -5,4 +5,4 @@ KiRhythmbox_v0.8
 
 全般的に見直したいと思いつつ、長期間未着手状態なので、一旦、Exampleのカタチで載せて一区切り。
 
-The example page => http://kiritter.github.io/KiRhythmbox_v0.8/
+The example page => https://kiritter.github.io/KiRhythmbox_v0.8/
